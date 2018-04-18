@@ -12,7 +12,7 @@ class EmailParser
   end
 
   def parse(email)
-    self.all.each{ |e| 
+    self.all.each{ |e|
       e.email = e.email.split(", ")
     }
   end
