@@ -11,7 +11,8 @@ class EmailParser
   end
 
   def parse
-    email.split.collect(", ")
-    }
+    email.split.collect{ |e| 
+      e.split(",")
+    }.flatten.uniq
   end
 end
