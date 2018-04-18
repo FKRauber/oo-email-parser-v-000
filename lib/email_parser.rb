@@ -10,9 +10,8 @@ class EmailParser
     @email = email
   end
 
-  def parse(email)
-    self.all.each{ |e|
-      e.email = e.email.split(", ")
+  def parse
+    email.split.collect(", ")
     }
   end
 end
