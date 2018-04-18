@@ -11,7 +11,9 @@ class EmailParser
     @@addresses << self
   end
 
-  def parse
-
+  def parse(email)
+    self.all.each{ |e| 
+      e.email = e.email.split(", ")
+    }
   end
 end
